@@ -20,6 +20,7 @@ class Media extends Model
     const MEDIA_PATH = '../data/picture/';
     const VIGN_PATH = '../data/thumbnail/';
     const BACK_PATH = '../data/backup/';
+    const EXT_VALID =array('jpg','jpeg');
 
     public function __construct(array $dataMedia)
     {

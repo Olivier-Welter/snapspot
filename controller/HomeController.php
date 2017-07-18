@@ -20,22 +20,7 @@ class HomeController
         $mediaManager = new MediaManager();
 
         if (isset($_FILES['my_file'])) {
-            //Checking File tranfser
-            if ($_FILES['my_file']['error'] > 0) {
-                echo 'Erreur lors du transfert';
-            } elseif (preg_match('#[\x00-\x1F\x7F-\x9F/\\\\]#', $_FILES['my_file']['name'])) {
-                exit("Nom de fichier non valide");
-            } else {
-                //manage files settings
-                $media = new Media([
-                    'oldName' => $_FILES["my_file"]["name"],
-                    'fileSize' => $_FILES["my_file"]["size"],
-                    'event' => $settings->getEvent()
-                ]);
-                $mediaManager->add($media);
-                $media->updateNewName($mediaManager);
-                header('location:index.php');
-            }
+            $mediaManager->checkMedia();
         }
     }
 

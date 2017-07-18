@@ -83,4 +83,30 @@ class MediaManager extends Model
         $q->execute();
     }
 
+    public function checkMedia()
+    {
+        
+        //Checking File tranfser
+        if ($_FILES['my_file']['error'] > 0) {
+            echo 'Erreur lors du transfert';
+        } else {
+            if (!in_array(strtolower(  substr(  strrchr($_FILES['my_file']['name'], '.')  ,1)  ), Media::EXT_VALID)) {
+                exit('<h1>Extension non valide</h1>');
+            } elseif (preg_match('#[\x00-\x1F\x7F-\x9F/\\\\]#', $_FILES['my_file']['name'])) {
+                exit('<h1>Nom de fichier invalide</h1>');
+            } else {
+                $settings = new Settings();
+                //manage files settings
+                $media = new Media([
+                    'oldName' => $_FILES["my_file"]["name"],
+                    'fileSize' => $_FILES["my_file"]["size"],
+                    'event' => $settings->getEvent()
+                ]);
+                $this->add($media);
+                $media->updateNewName($mediaManager);
+                header('location:index.php');
+            }
+        }
+    }
+
 }
