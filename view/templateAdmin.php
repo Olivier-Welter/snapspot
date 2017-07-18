@@ -11,7 +11,7 @@
 </head>
 <body>
     <div id="main-container" class="container-fluid">
-        <div class="col-lg-10 col-lg-offset-1 col-md-8 col-xs-12">  
+        <div class="row col-lg-offset-2 col-lg-8 col-md-12  col-sm-12 col-xs-12">  
             <h3 class="btn btn-primary" id="deco"><a class="heading" href="?deconnexion=1">Déconnexion</a></h3>
             <div class ="text-center"><h1><a class="heading"  href="index.php">Raspot.in !</a></h1> 
                 <h3 class="heading text-center"><?= $titre ?></h3>
@@ -27,7 +27,7 @@
                     </div>
                 </form>
 
-                <div class="col-lg-8 col-md-offset-2 col-md-8 col-xs-12">      
+                <div class="col-lg-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-xs-12">      
                     <?= $contenu ?>
                 </div>
             </div>

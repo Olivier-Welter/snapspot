@@ -9,7 +9,7 @@ $percentStock = ($stock * 100) / Settings::STOCK_SIZE;
 $percentBack = ($back * 100) / Settings::BACK_SIZE;
 ?>
 
-    <form id="paramAppli" class="row col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-xs-12" action="" method="post">
+<form id="paramAppli" class="row col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-xs-12" action="" method="post">
     <div>
         <label for="event">Nom de l'événement:</label>
         <div class="input-group">
@@ -41,16 +41,16 @@ $percentBack = ($back * 100) / Settings::BACK_SIZE;
     </div>
 </form>
 
-    <div class="row col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-xs-12">
-    <form method="post" id="change_fond" action="" enctype="multipart/form-data">
+<div >
+    <form class="row col-lg-8 col-md-offset-2 col-md-8 col-xs-12" method="post" id="change_fond" action="" enctype="multipart/form-data">
         <label for="image_fond">Fond d'écran :</label>
         <div>
-            <input class="btn btn-info col-lg-12" style="cursor:pointer; color: #fff; background-color: #337ab7; border-color: #2e6da4;" type="file" id="image_fond" name="image_fond">
+            <input class="btn btn-info  col-lg-12 col-md-12 col-sm-12 col-xs-12" style="cursor:pointer; color: #fff; background-color: #337ab7; border-color: #2e6da4;" type="file" id="image_fond" name="image_fond">
         </div>
     </form>
 </div>
 
-    <div class="row col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-xs-12">
+<div class="row col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-xs-12">
     <label for>Utilisation stockage</label>
     <div>
         <div class="progress text-center" style="text-indent: -<?= $percentStock ?>%" >
@@ -61,7 +61,7 @@ $percentBack = ($back * 100) / Settings::BACK_SIZE;
     </div>
 </div> 
 
-    <div class="row col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-xs-12">
+<div class="row col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-xs-12">
     <label for>Utilisation backup</label>
     <div>
         <div class="progress text-center" style="text-indent: -<?= $percentBack ?>%">
@@ -72,19 +72,19 @@ $percentBack = ($back * 100) / Settings::BACK_SIZE;
     </div>
 </div> 
 
-    <div class="row col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-xs-12">
+<div class="row col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-xs-12">
     <label for>Nettoyage du disque</label>
 
 
     <form action="" method="post">
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4 col-sm-4">
                 <button class="btn btn-primary " type="submit" name="delete_data_submit" value="data">Images <span class="badge"><?= count(glob(Media::MEDIA_PATH . '*.jpg')); ?></span></button>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4 col-sm-4">
                 <button class="btn btn-primary " type="submit" name="delete_backup_submit" value="backup">Backup <span class="badge"><?= count(glob(Media::BACK_PATH . '*.jpg')); ?></span></button>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4 col-sm-4">
                 <input class="btn btn-primary btn-danger" type="submit" name="Reset" value="Reset">
             </div>
         </div>
