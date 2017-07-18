@@ -36,9 +36,9 @@ class Router
     }
 
     // Error view request
-    private function erreur($msgErreur)
+    public function error($msgErreur)
     {
-        $vue = new View("Erreur");
+        $vue = new View("Error");
         $vue->generer(array('msgErreur' => $msgErreur));
     }
 
