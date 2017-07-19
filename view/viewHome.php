@@ -1,9 +1,8 @@
 <?php $this->titre = "Raspot.in"; ?>
-
 <div class="row">
     <div class="row text-center">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg12">
-            <form method="post" id='uploadform' action="index.php"  enctype="multipart/form-data" >
+            <form method="post" id='uploadform' action="../public/index.php"  enctype="multipart/form-data" >
                 <img class="cameraico" src="static/css/lens-37025_640.png" id="upfile1" width="75" style="cursor:pointer" alt="logo_appli" type="submit" />
                 <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
                 <input type="file" id="my_file"  name="my_file" accept="image/*" capture="camera" style="display:none"  />

@@ -85,12 +85,12 @@ class MediaManager extends Model
 
     public function checkMedia()
     {
-        
+
         //Checking File tranfser
         if ($_FILES['my_file']['error'] > 0) {
             echo 'Erreur lors du transfert';
         } else {
-            if (!in_array(strtolower(  substr(  strrchr($_FILES['my_file']['name'], '.')  ,1)  ), Media::EXT_VALID)) {
+            if (!in_array(strtolower(substr(strrchr($_FILES['my_file']['name'], '.'), 1)), Media::EXT_VALID)) {
                 exit('<h1>Extension non valide</h1>');
             } elseif (preg_match('#[\x00-\x1F\x7F-\x9F/\\\\]#', $_FILES['my_file']['name'])) {
                 exit('<h1>Nom de fichier invalide</h1>');
@@ -103,7 +103,8 @@ class MediaManager extends Model
                     'event' => $settings->getEvent()
                 ]);
                 $this->add($media);
-                header('location:index.php');
+                echo'<meta http-equiv="refresh" content="0; url=../public/index.php" />';
+                exit;
             }
         }
     }

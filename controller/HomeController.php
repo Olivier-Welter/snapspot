@@ -8,7 +8,6 @@ class HomeController
     // Display for Home request and manage picture uploaded
     public function home()
     {
-
         try {
             $view = new View("Home");
             $view->generer(array());
