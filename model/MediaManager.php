@@ -103,7 +103,6 @@ class MediaManager extends Model
                     'event' => $settings->getEvent()
                 ]);
                 $this->add($media);
-                $media->updateNewName($mediaManager);
                 header('location:index.php');
             }
         }
