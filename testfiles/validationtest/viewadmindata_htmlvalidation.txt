@@ -1,0 +1,24 @@
+Nu Html Checker
+This tool is an ongoing experiment in better HTML checking, and its behavior remains subject to change
+
+Showing results for http://www.wanderers.fr/snapspot/public/adm.php?Data=Data
+
+Checker Input
+Show sourceoutlineimage reportOptions…
+
+Check by
+http://www.wanderers.fr/snapspot/public/adm.php?Data=Data
+Check
+
+Press the Message Filtering button to collapse the filtering options and error/warning/info counts.
+Message Filtering
+Errors (1) · Hide all errors · Show all errors
+Bad value  for attribute action on element form: Must be non-empty.
+Error: Bad value  for attribute action on element form: Must be non-empty.
+From line 17, column 1; to line 17, column 42
+on</h3>???<form action="" class="row" method="post">?    <
+Document checking completed.
+
+Used the HTML parser. Externally specified character encoding was UTF-8.
+Total execution time 222 milliseconds.
+About this checker • Report an issue • Version: 17.7.10

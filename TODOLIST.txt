@@ -1,0 +1,11 @@
+This version has to be improved.
+
+Please find below a list, non-comprenhensive,  of what has to be developed:
+
+-Redirection and rewriting via htaccess file
+-Session and Authentication object via independent components
+-Application Rules in independent components
+
+-USB management script
+-Display Application script
+

@@ -1,0 +1,135 @@
+/* General Style */
+html {
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+@font-face {
+    font-family: Pacifico;
+    src: url('fonts/Pacifico.ttf');
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(1);
+        border-radius: 75%;
+    }
+    50% {
+        transform: scale(0.9);
+        border-radius: 50%;
+        background-color: darkgrey;
+    }
+    100% {
+        transform: scale(1);
+        border-radius: 75%;
+    }
+}
+
+.cameraico {
+    animation: zoom 1s infinite;
+}
+
+
+body {
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding-top: 3px;
+    margin: 0;
+    overflow: auto;
+    position: relative;
+    background-size: cover;
+}
+
+h1, h2, h3 {
+    font-family: Pacifico, Arial, sans-serif;
+    color: #FFFFFF;
+    text-shadow: 0 2px 4px #363636;
+}
+
+.heading {
+    font-family: Pacifico, Arial, sans-serif;
+    color: #FFFFFF;
+    text-shadow: 0 2px 4px #363636;
+}
+
+a.heading {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #eeeeee;
+}
+
+label[for] {
+    color: white;
+    cursor: pointer;
+    text-shadow: 0 1px 2px #363636;
+}
+
+label[for=""] {
+    cursor: default;
+    text-shadow: 0 1px 2px #363636;
+}
+
+
+/** bluring background */
+body:before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    display: block;
+    background: url('home.jpg') no-repeat center center fixed;
+    background-size:cover;
+    width: 100%;
+    height: 100%;
+
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+}
+
+#main-container {
+    min-height: 100%;
+    margin-bottom: -40px;
+    padding-bottom: 30px;
+}
+
+footer {
+    color: #FFFFFF;
+    text-align: center;
+    margin: 10px auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Front */
+#explain {
+    font-family: Pacifico, Arial, sans-serif;
+    text-shadow: 0 3px 5px #363636;
+    font-size: 24px;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Progress tool */
+.progress {
+    -webkit-transition: opacity 0.4s;
+    -moz-transition: opacity 0.4s;
+    -ms-transition: opacity 0.4s;
+    -o-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+    margin: 5px;
+    opacity: 0.9;
+}
